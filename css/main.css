@@ -2781,7 +2781,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #ff7aff;
+  background: #59ffad;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2845,6 +2845,7 @@ body {
   border-radius: 25px;
   -webkit-box-shadow: 0 0 5px #788072;
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+  background: #fff;
 }
 .logo-line {
   background: #fb7299;
@@ -2874,7 +2875,6 @@ body {
   border-radius: 50%;
 }
 .main-inner {
-  background: #fff;
   padding-bottom: 0px;
   border-radius: 25px;
 }
