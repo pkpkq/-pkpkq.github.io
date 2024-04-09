@@ -4,11 +4,37 @@
   
     
     <entry>
+      <title>AndroidStudio使用Gradle镜像</title>
+      <link href="/2024/04/09/AndroidStudio%E4%BD%BF%E7%94%A8Gradle%E9%95%9C%E5%83%8F/"/>
+      <url>/2024/04/09/AndroidStudio%E4%BD%BF%E7%94%A8Gradle%E9%95%9C%E5%83%8F/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在开发Android时，我们需要使用Gradle来构建打包项目。但是国内下载Gradle实在太慢，所以一般需要配置镜像源来加速下载。</p><h3 id="配置镜像源"><a href="#配置镜像源" class="headerlink" title="配置镜像源"></a>配置镜像源</h3><p>以腾讯Gradle镜像库为例 <a href="https://mirrors.cloud.tencent.com/gradle/">Index of &#x2F;gradle&#x2F; (tencent.com)</a></p><p>1、打开网址。</p><p>2、找到需要下载的版本号，复制链接。</p><p>3、打开项目 gradle&#x2F;wrapper&#x2F;gradle-wrapper.properties文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#Fri Dec 04 10:19:40 CST 2020</span><br><span class="line">distributionBase=GRADLE_USER_HOME</span><br><span class="line">distributionPath=wrapper/dists</span><br><span class="line">zipStoreBase=GRADLE_USER_HOME</span><br><span class="line">zipStorePath=wrapper/dists</span><br><span class="line">distributionUrl=https\://services.gradle.org/distributions/gradle-6.1.1-all.zip</span><br></pre></td></tr></table></figure><p>替换 distributionUrl 后面的链接，同步项目即可。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">distributionUrl=https\://mirrors.cloud.tencent.com/gradle/gradle-6.1.1-all.zip</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AndroidStudio配置镜像源</title>
+      <link href="/2024/04/09/AndroidStudio%E9%85%8D%E7%BD%AE%E9%95%9C%E5%83%8F%E6%BA%90/"/>
+      <url>/2024/04/09/AndroidStudio%E9%85%8D%E7%BD%AE%E9%95%9C%E5%83%8F%E6%BA%90/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>如何在hexo上创建一篇文章</title>
       <link href="/2024/04/01/%E5%A6%82%E4%BD%95%E5%9C%A8hexo%E4%B8%8A%E5%88%9B%E5%BB%BA%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
       <url>/2024/04/01/%E5%A6%82%E4%BD%95%E5%9C%A8hexo%E4%B8%8A%E5%88%9B%E5%BB%BA%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
       
-        <content type="html"><![CDATA[<h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><h3 id="使用命令新建文章"><a href="#使用命令新建文章" class="headerlink" title="使用命令新建文章"></a>使用命令新建文章</h3><p><code>hexo new [layout] &lt;title&gt;</code></p><p>layout为文章布局，默认post，可不写。</p><p>title为文章标题，也是文件名字。</p><p>执行此条命令后，将会在source&#x2F;_posts下生成一个以文章标题命名的MarkDown文件。</p><h2 id="文章编辑"><a href="#文章编辑" class="headerlink" title="文章编辑"></a>文章编辑</h2><h3 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h3><p>Front-matter是文件上方以-分割的区域，用于指定文章的参数设置。</p><h3 id="Front-matter参数"><a href="#Front-matter参数" class="headerlink" title="Front-matter参数"></a>Front-matter参数</h3><table><thead><tr><th>参数</th><th>描述</th><th>默认值</th></tr></thead><tbody><tr><td>layout</td><td>布局</td><td>无</td></tr><tr><td>title</td><td>标题</td><td>无</td></tr><tr><td>date</td><td>建立日期</td><td>文件建立日期</td></tr><tr><td>updated</td><td>更新日期</td><td>文件更新日期</td></tr><tr><td>comments</td><td>是否开启文章评论功能(此功能需要配置完毕才能生效)</td><td>true</td></tr><tr><td>tags</td><td>标签</td><td>(不适用于分页)</td></tr><tr><td>categories</td><td>分类</td><td>(不适用于分页)</td></tr><tr><td>permalink</td><td>覆盖文章网址</td><td>无</td></tr></tbody></table><h3 id="控制主页浏览"><a href="#控制主页浏览" class="headerlink" title="控制主页浏览"></a>控制主页浏览</h3><p>next主题的主页文档浏览默认是全文浏览，这样会导致主页太长。可以在文章中使用</p><p><code>&lt;!-- more --&gt;</code></p><p>来截止浏览。添加后，主页在插入处截止了浏览，在下方显示阅读全文的按钮。</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><h3 id="使用命令新建文章"><a href="#使用命令新建文章" class="headerlink" title="使用命令新建文章"></a>使用命令新建文章</h3><p><code>hexo new [layout] &lt;title&gt;</code></p><p>layout为文章布局，默认post，可不写。</p><p>title为文章标题，也是文件名字。</p><p>执行此条命令后，将会在source&#x2F;_posts下生成一个以文章标题命名的MarkDown文件。</p><h2 id="文章编辑"><a href="#文章编辑" class="headerlink" title="文章编辑"></a>文章编辑</h2><h3 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h3><p>Front-matter是文件上方以-分割的区域，用于指定文章的参数设置。</p><h3 id="Front-matter参数"><a href="#Front-matter参数" class="headerlink" title="Front-matter参数"></a>Front-matter参数</h3><table><thead><tr><th>参数</th><th>描述</th><th>默认值</th></tr></thead><tbody><tr><td>layout</td><td>布局</td><td>无</td></tr><tr><td>title</td><td>标题</td><td>无</td></tr><tr><td>date</td><td>建立日期</td><td>文件建立日期</td></tr><tr><td>updated</td><td>更新日期</td><td>文件更新日期</td></tr><tr><td>comments</td><td>是否开启文章评论功能(此功能需要配置完毕才能生效)</td><td>true</td></tr><tr><td>tags</td><td>标签</td><td>(不适用于分页)</td></tr><tr><td>categories</td><td>分类</td><td>(不适用于分页)</td></tr><tr><td>permalink</td><td>覆盖文章网址</td><td>无</td></tr></tbody></table><h3 id="控制主页浏览"><a href="#控制主页浏览" class="headerlink" title="控制主页浏览"></a>控制主页浏览</h3><p>next主题的主页文档浏览默认是全文浏览，这样会导致主页太长。可以在文章中使用</p><p><code>&lt;!-- more --&gt;</code></p><p>来截止浏览。添加后，主页在插入处截止了浏览，在下方显示阅读全文的按钮。</p><span id="more"></span>]]></content>
       
       
       
